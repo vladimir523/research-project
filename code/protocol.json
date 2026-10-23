@@ -1,0 +1,20 @@
+{
+  "status": "Exploratory pilot protocol written before this experiment, after earlier different pilots; not preregistered",
+  "question": "Does increasing the mean separation of an independent informative feature Z reduce recovery of the fixed correlation-only pair X,Y in explanation rankings?",
+  "design": "Given group labels, not learned clusters; isolates interpretation as in the motivation paper",
+  "dimensions": 10,
+  "train": 600,
+  "test": 600,
+  "balanced_groups": true,
+  "rho_A": 0.8,
+  "rho_B": 0.0,
+  "means_Z": "-delta/2 in B, +delta/2 in A",
+  "delta": [0, 0.5, 1, 2, 3, 4],
+  "replicates": 20,
+  "pairing": "Exactly same observations/noise, labels, seeds and test anchors across delta; only Z means change",
+  "primary": "Probability both planted feature indices are among the top 3; Wilson 95% intervals over independent datasets",
+  "secondary": ["both in top 2 (limited explanation budget)", "both in top 5", "test accuracy and log-loss", "LIME local fit R2"],
+  "methods": ["RF permutation accuracy importance", "RF permutation negative log-loss importance (saturation diagnostic)", "LIME absolute weights averaged over 8 balanced heldout objects", "PCA absolute first-PC loadings after pooled standardization", "PCA first-PC loadings averaged over separately centered and standardized groups (mean-invariance control)", "Direct Fisher-z correlation-difference scores; feature score is maximum incident-pair score"],
+  "negative_control": "rho_A=rho_B=0, 20 independent datasets, delta 0 and 4; Holm FWER at 0.05 for 45 fixed-label pair comparisons",
+  "limitations": ["Feature recovery is not pair relationship/sign recovery", "Z is a valid predictor, not irrelevant noise", "Univariate rankings, local LIME and PCA solve different tasks", "No claim of new method or novelty established", "No control of learned-partition selection bias in this fixed-label experiment"]
+}

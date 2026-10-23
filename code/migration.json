@@ -1,0 +1,13 @@
+{
+  "original_experiment": "correlation_pattern_pilot",
+  "changes": [
+    "Scripts moved from src/ to code/",
+    "Updated artifact root and source hashing",
+    "Added --output for isolated verification"
+  ],
+  "source_sha256": {
+    "experiment.py": "623b8fe6be7feac0ace8d09fa707e908351c50c52f3fb7d8bd0b45e502f9c7b9",
+    "methods.py": "4cbf8316895a8513554d20973e4338a25fd11b7fddeba09bfbb41cbe0ada79dc",
+    "visualization.py": "07f75d95bef6c0642ac6b0438c84f0c9ca7a4e7de1d31a2ec4a4018b80c954d9"
+  }
+}

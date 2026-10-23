@@ -1,0 +1,18 @@
+{
+  "replicates": 20,
+  "seconds": 749.2627700999983,
+  "python": "3.13.0",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "lime": "0.2.0.1"
+  },
+  "source_sha256": {
+    "experiment.py": "63f1e2b5eb7755a7ac8284f7b2bff734e78e5c03f2aa4cc354d2117964df5f7a",
+    "methods.py": "4cbf8316895a8513554d20973e4338a25fd11b7fddeba09bfbb41cbe0ada79dc",
+    "visualization.py": "26e607829323ef5e7b5bb1ea03cbfaf968d99e27c15bdfc9f80f86716afd30a0"
+  }
+}
